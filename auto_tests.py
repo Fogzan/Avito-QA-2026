@@ -115,7 +115,7 @@ def test_create_item_success():
         assert item_id is not None, "Не найден item_id"
         assert (
             "Сохранили объявление - " in response_json["status"]
-        ), f"В ответе не найдено сообщение о сохраненном объявлении: {response_json["status"]}"
+        ), f"В ответе не найдено сообщение о сохраненном объявлении: {response_json['status']}"
 
 
 # API-002 Создание объявления без обязательного поля sellerID
@@ -140,7 +140,7 @@ def test_create_item_missing_seller_id():
     with allure.step("Проверка сообщения об ошибке"):
         assert (
             response_json["result"]["message"] == "поле sellerID обязательно"
-        ), f"В ответе находится некорректное сообщение об отсутствии поля sellerID: {response_json["result"]["message"]}"
+        ), f"В ответе находится некорректное сообщение об отсутствии поля sellerID: {response_json['result']['message']}"
 
 
 # API-003 Многократное получение одного и того же объявления
@@ -205,13 +205,13 @@ def test_full_lifecycle():
         get_data = get_response.json()[0]
         assert (
             get_data["name"] == VALID_NAME
-        ), f"Поле name не совпадает с полем name, которое использовалось при создании: {get_data["name"]}"
+        ), f"Поле name не совпадает с полем name, которое использовалось при создании: {get_data['name']}"
         assert (
             get_data["price"] == VALID_PRICE
-        ), f"Поле price не совпадает с полем price, которое использовалось при создании: {get_data["price"]}"
+        ), f"Поле price не совпадает с полем price, которое использовалось при создании: {get_data['price']}"
         assert (
             get_data["sellerId"] == seller_id
-        ), f"Поле sellerId не совпадает с полем sellerId, которое использовалось при создании: {get_data["sellerId"]}"
+        ), f"Поле sellerId не совпадает с полем sellerId, которое использовалось при создании: {get_data['sellerId']}"
 
     # Чтение по ID продавца
     with allure.step("Получение объявлений продавца"):
