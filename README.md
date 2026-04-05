@@ -21,9 +21,9 @@
 - Allure добавлен в код  
 [Результат](Allure_report.png)  
 Для запуска авто-тестов с использованием allure:  
-    1.Для запуска автотестов с сохранением результатов в формате allure: `pytest auto_tests.py --alluredir=allure-results`
-    2.Для сбора результатов в отчет: `allure generate allure-results -o allure-report --clean`
-    3.Для запуска веб-приложения с отчетом: `allure open allure-report`
+    1.Для запуска автотестов с сохранением результатов в формате allure: `pytest auto_tests.py --alluredir=allure-results`  
+    2.Для сбора результатов в отчет: `allure generate allure-results -o allure-report --clean`  
+    3.Для запуска веб-приложения с отчетом: `allure open allure-report`  
 
 - Линтер кода - Flake8  
 [Настройки Flake8](.flake8)  
