@@ -1,0 +1,12 @@
+# pyproject.toml
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+extend-exclude = '''
+/(
+    \.git
+  | \.ve
+  | __pycache__
+)/
+'''
